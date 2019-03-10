@@ -1,0 +1,57 @@
+{% include "header.html" %}
+
+<body class="hold-transition skin-red sidebar-mini">
+    <div class="wrapper">
+      {% include "nav.html" %}
+      {% include "menu.html" %}
+      
+     
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <h1>
+              Receipt History   
+            </h1>
+          </section>
+          <script>console.log({{result['receipthistory'] | tojson}})</script>
+          <section class="content">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="box">
+
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                      <thead>
+                      <tr>
+                        <th>Created At</th>
+                        <th>Disease</th>
+                        <th>Medicine</th>
+                        <th>Consult_Days</th>
+                        
+                      </tr>
+                      </thead>
+                      <tbody>
+                      {% for i in result['receipthistory'] %}
+                      <tr>
+                        <td>{{i[0]}}</td>
+                        <td>{{i[1]}}
+                        </td>
+                        <td>{{i[2]}}</td>
+                        <td>{{i[3]}}</td>
+                        
+                      </tr>
+                      {% endfor %}
+
+                      </tbody>
+                      
+                    </table>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+       </div></div> </section></div>  
+        <!-- /.content-wrapper -->
+      </section>
+       
+    {% include "footer.html" %}  

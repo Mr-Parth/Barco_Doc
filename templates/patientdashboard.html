@@ -1,0 +1,80 @@
+{% include "header.html" %}
+<body class="hold-transition skin-red sidebar-mini">
+  <div class="wrapper">
+    {% include "nav.html" %}
+    {% include "menu.html" %}
+    
+   
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Patient Dashboard    
+        </h1>
+      </section>
+  
+      <!-- Main content -->
+      <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Number Of Active Reservations</span>
+                <span class="info-box-number">{{result['countar']}}</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Number Of Nearby Hospitals</span>
+                <span class="info-box-number">{{result['countnh']}}</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+  
+          <!-- fix for small devices only -->
+          <!-- /.col -->
+        </div>
+
+        <br /><br />
+        <br /> <br />       <div class="row">
+          <div class="col-md-12">
+            <h1>Good health and good sense are two of life's greatest blessings.</h1>
+          <!-- /.col -->
+        </div></div>
+        <!-- /.row -->
+</div></section>
+    <!-- /.content-wrapper -->
+  </section>
+    <footer class="main-footer">
+
+      <strong>Team &copy; :- <a href="#">Databenders</a></strong> 
+    </footer>
+  
+    <!-- Control Sidebar -->
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  
+  </div>
+
+
+
+  <!-- ./wrapper -->
+{% include "footer.html" %}
+
+  
